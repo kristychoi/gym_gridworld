@@ -1,7 +1,7 @@
 # gym_gridworld
 
 Super small 4 x 4 gridworld, re-worked for compatibility in OpenAI gym environment.</br>
-Original grid world implementation by sudarshanseshadri </br>
+Original grid world implementation by sudarshanseshadri (https://github.com/sudarshanseshadri/gridworld)</br>
 
 To install:
 ```

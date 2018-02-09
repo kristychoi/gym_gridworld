@@ -1,7 +1,6 @@
 """
 Gym implementation of sudarshan's 4x4 grid world
 """
-
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding

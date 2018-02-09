@@ -10,11 +10,18 @@ cd gym_gridworld
 pip3 install -e .
 ```
 
-To use:
+To use (x,y) state space:
 ```
 import gym
 import gym_gridworld
 env = gym.make('gym_gridworld-v0')
+```
+
+To use one-hot encoding of states (same grid world):
+```
+import gym
+import gym_gridworld
+env = gym.make('gym_onehotgrid-v0')
 ```
 
 TODOs:

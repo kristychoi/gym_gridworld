@@ -98,7 +98,7 @@ class GridWorldEnv(gym.Env):
 	def _reset(self):
 		self.state = self.start
 		self.done = False
-		self.get_state()
+		return self.get_state()
 
 	def _render(self, mode='human', close=False):
 		raise NotImplementedError

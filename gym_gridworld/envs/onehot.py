@@ -6,7 +6,7 @@ import gym
 import numpy as np
 from gym import error, spaces, utils
 from gym.utils import seeding
-from gridworld import GridWorldEnv 
+from gym_gridworld.envs.gridworld import GridWorldEnv
 
 class OneHotGridWorldEnv(GridWorldEnv):
 	metadata = {'render.modes': ['human']}

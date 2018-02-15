@@ -61,11 +61,11 @@ class NChain(gym.Env):
 
     def _get_reward(self, action):
         if self.done and action == 1:
-            return 1
+            return 10
         elif action == 0:
             return self.reset_val
         else:
-            return 1
+            return 0
 
     def get_state(self):
         """

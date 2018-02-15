@@ -10,7 +10,7 @@ from gym.utils import seeding
 class NChain(gym.Env):
     metadata = {'render.modes': ['human']}
 
-    def __init__(self, n_states, reset_val=0.01):
+    def __init__(self):
         self.state = 0
         self.start = 0
         self.done = False
@@ -18,10 +18,11 @@ class NChain(gym.Env):
         # define action space
         self.action_space = spaces.Discrete(2)  # possible actions: return to start,
         # advance forward
+        # todo: define observation space?
 
         # n_states
-        self.n_states = n_states
-        self.reset_val = reset_val
+        self.n_states = 10
+        self.reset_val = 0.01
 
         # reset
         self._reset()

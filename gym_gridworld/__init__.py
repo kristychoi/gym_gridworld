@@ -13,3 +13,10 @@ register(
     timestep_limit=1000,
     nondeterministic = True,
 )
+
+register(
+    id='gym_nchain-v0',
+    entry_point='gym_gridworld.envs:NChain',
+    timestep_limit=1000,
+    nondeterministic=True,
+)

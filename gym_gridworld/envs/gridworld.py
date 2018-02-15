@@ -14,15 +14,17 @@ class GridWorldEnv(gym.Env):
 		self.start = (0,0)
 
 		# state space is a 4x4 grid
-		self.size = 4
+		# self.size = 4
+		self.size = 3
 
 		# action space of 4 discrete actions
 		self.action_space = spaces.Discrete(4)
 
 		# make sure start state is within grid world boundaries
 		assert self.in_bounds(self.start)
-		
-		self.terminal_d = {(1, 1):1, (3, 3):10}
+
+		self.terminal_d = {(2,2): 10}
+		# self.terminal_d = {(1, 1):1, (3, 3):10}
 		# need at least one terminal state. And they all must be in bounds
 		assert len(self.terminal_d.keys()) > 0
 		for state in self.terminal_d:

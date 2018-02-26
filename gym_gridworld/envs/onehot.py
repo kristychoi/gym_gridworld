@@ -21,3 +21,7 @@ class OneHotGridWorldEnv(GridWorldEnv):
 		idx = self.size*row + col
 		state_vec[idx] = 1
 		return state_vec
+
+	#length of a one-hot vector
+	def state_size(self):
+		return self.size ** 2

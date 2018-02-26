@@ -13,8 +13,7 @@ class GridWorldEnv(gym.Env):
 		# specifying size, start_state, terminal_state_d as per OG code
 		self.start = (0,0)
 
-		# state space is a 4x4 grid
-		# self.size = 4
+		# state space is a 3x3 grid
 		self.size = 3
 
 		# action space of 4 discrete actions
@@ -24,14 +23,14 @@ class GridWorldEnv(gym.Env):
 		assert self.in_bounds(self.start)
 
 		self.terminal_d = {(2,2): 10}
-		# self.terminal_d = {(1, 1):1, (3, 3):10}
+
 		# need at least one terminal state. And they all must be in bounds
 		assert len(self.terminal_d.keys()) > 0
 		for state in self.terminal_d:
 			assert self.in_bounds(state)
 
 		# default reward when not moving from a terminal state
-		self.default_reward = -0.1
+		self.default_reward = -1
 
 		self._reset()
 
@@ -104,3 +103,9 @@ class GridWorldEnv(gym.Env):
 	def _render(self, mode='human', close=False):
 		# raise NotImplementedError
 		return
+
+	def state_size(self):
+		return 2
+
+	def num_actions(self):
+		return self.action_space.n

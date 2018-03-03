@@ -61,7 +61,7 @@ class NChain(gym.Env):
 
     def _get_reward(self, action):
         if self.done and action == 1:
-            return 10
+            return 100
         elif action == 0:
             return self.reset_val
         else:
@@ -75,6 +75,12 @@ class NChain(gym.Env):
         state = np.zeros(self.n_states)
         state[self.state] = 1
         return state
+
+    def state_size(self):
+        return self.n_states
+
+    def num_actions(self):
+        return self.action_space.n
 
     def get_status(self):
         return self.done
